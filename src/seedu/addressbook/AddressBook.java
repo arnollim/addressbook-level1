@@ -392,6 +392,22 @@ public class AddressBook {
         }
     }
 
+    //EASTER EGG FUNCTIONS HERE
+    private static String easterEggCommand1(){
+        String conspiracy = "Bush did 911, The Earth is Flat!!!";
+        return conspiracy;
+    }
+
+    private static String easterEggCommand2(){
+        String cool = "Professor Damith is the best Professor Ever :)";
+        return cool;
+    }
+
+    private static String promoCodeCommand(){
+        String redeem = "Promo Code Activated: Redeem free hug from Arnol after the Tutorial:)";
+        return redeem;
+    }
+
     /**
      * Splits raw user input into command word and command arguments string
      *
