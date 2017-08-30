@@ -135,6 +135,10 @@ public class AddressBook {
 
     private static final String DIVIDER = "===================================================";
 
+    //Arnol Added the following Easter Egg Strings
+    private static final String EASTER_EGG_WORD_1 = "MATLAB";
+    private static final String EASTER_EGG_WORD_2 = "PYTHON";
+    private static final String PROMO_CODE = "SSFN2";
 
     /* We use a String array to store details of a single person.
      * The constants given below are the indexes for the different data elements of a person
