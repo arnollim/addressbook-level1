@@ -387,6 +387,13 @@ public class AddressBook {
             return getUsageInfoForAllCommands();
         case COMMAND_EXIT_WORD:
             executeExitProgramRequest();
+        //Easter Egg cases here
+        case EASTER_EGG_WORD_1:
+            return easterEggCommand1();
+        case EASTER_EGG_WORD_2:
+            return easterEggCommand2();
+        case PROMO_CODE:
+            return promoCodeCommand();
         default:
             return getMessageForInvalidCommandInput(commandType, getUsageInfoForAllCommands());
         }
