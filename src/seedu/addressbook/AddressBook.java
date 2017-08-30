@@ -136,6 +136,10 @@ public class AddressBook {
 
     private static final String DIVIDER = "===================================================";
 
+    //Arnol Added the following working strings
+    private static final String MESSAGE_COMMAND_HELP_ONLINE_MESSAGE = "For more information, go to";
+    private static final String MESSAGE_COMMAND_HELP_URL = "https://github.com/nus-cs2103-AY1718S1/addressbook-level1";
+
     //Arnol Added the following Easter Egg Strings
     //LO 3.3
     private static final String EASTER_EGG_WORD_1 = "MATLAB";
@@ -1140,7 +1144,14 @@ public class AddressBook {
                 + getUsageInfoForDeleteCommand() + LS
                 + getUsageInfoForClearCommand() + LS
                 + getUsageInfoForExitCommand() + LS
-                + getUsageInfoForHelpCommand();
+                + getUsageInfoForHelpCommand() + LS
+                + getUsageInfoFromOnline();
+    }
+
+    //Arnol Added the following function
+    private static String getUsageInfoFromOnline() {
+        //return MESSAGE_COMMAND_HELP_ONLINE_MESSAGE;
+        return String.format(MESSAGE_COMMAND_HELP_ONLINE_MESSAGE) + LS + String.format(MESSAGE_COMMAND_HELP_URL);
     }
 
     /** Returns the string for showing 'add' command usage instruction */
