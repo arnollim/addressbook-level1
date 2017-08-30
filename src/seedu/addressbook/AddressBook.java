@@ -22,6 +22,7 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.concurrent.ThreadLocalRandom;//For executeReason() easter egg
 
 /*
  * NOTE : =============================================================
@@ -136,9 +137,11 @@ public class AddressBook {
     private static final String DIVIDER = "===================================================";
 
     //Arnol Added the following Easter Egg Strings
+    //LO 3.3
     private static final String EASTER_EGG_WORD_1 = "MATLAB";
     private static final String EASTER_EGG_WORD_2 = "PYTHON";
     private static final String PROMO_CODE = "SSFN2";
+    private static final String COMMAND_WHY_WORD = "why";
 
     /* We use a String array to store details of a single person.
      * The constants given below are the indexes for the different data elements of a person
@@ -394,6 +397,8 @@ public class AddressBook {
             return easterEggCommand2();
         case PROMO_CODE:
             return promoCodeCommand();
+        case COMMAND_WHY_WORD:
+            return executeReason();
         default:
             return getMessageForInvalidCommandInput(commandType, getUsageInfoForAllCommands());
         }
@@ -413,6 +418,26 @@ public class AddressBook {
     private static String promoCodeCommand(){
         String redeem = "Promo Code Activated: Redeem free hug from Arnol after the Tutorial:)";
         return redeem;
+    }
+
+    private static String executeReason() {
+        int min = 1;
+        int max = 5;
+        int r = ThreadLocalRandom.current().nextInt(min, max + 1);
+        switch (r) {
+            case 1:
+                return "Because CS2103/T is cool";
+            case 2:
+                return "Because the Software Engineer told you so";
+            case 3:
+                return "Because Professor Damith agrees that it is a good idea";
+            case 4:
+                return "Because the quick brown fox jumped over the lazy dog";
+            case 5:
+                return "Because MATLAB also has easter eggs";
+            default:
+                return "Because life is good";
+        }
     }
 
     /**
